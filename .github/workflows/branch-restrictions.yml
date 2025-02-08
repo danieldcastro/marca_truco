@@ -1,0 +1,17 @@
+name: Restrict Branch Names
+
+on:
+  create:
+
+jobs:
+  check-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch name
+        run: |
+          BRANCH_NAME="${{ github.ref_name }}"
+          if [[ ! "$BRANCH_NAME" =~ ^(feat/|fix/|chore/|ref/|docs/|revert/|build/|ci/|test/) ]]; then
+            echo "❌ Branch name '$BRANCH_NAME' is not allowed!"
+            echo "Allowed branch name prefixes are: feat/, fix/, chore/, ref/, docs/, revert/, build/, ci/, test/"
+            exit 1
+          fi
