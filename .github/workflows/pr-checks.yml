@@ -49,6 +49,9 @@ jobs:
       - name: Check for suggested fixes
         run: dart fix --dry-run
 
+      - name: Check formatting
+        run: dart format --set-exit-if-changed .
+
       - name: Install DCM
         uses: CQLabs/setup-dcm@v2
         with:
@@ -56,6 +59,3 @@ jobs:
 
       - name: Executar DCM
         run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
-
-      - name: Check formatting
-        run: dart format --set-exit-if-changed .
