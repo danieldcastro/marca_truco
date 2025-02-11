@@ -54,14 +54,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Executar análise DCM
-        uses: CQLabs/dcm-action@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          ci-key: ${{ secrets.DCM_CI_KEY }}
-          email: ${{ secrets.DCM_EMAIL }}
-          analyze: true
-          folders: lib
+      - name: Executar DCM
+        run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
 
       - name: Check formatting
         run: dart format --set-exit-if-changed .
