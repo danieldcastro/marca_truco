@@ -58,8 +58,8 @@ jobs:
         uses: CQLabs/dcm-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          ci-key: oss
-          email: oss
+          ci-key: ${{ secrets.DCM_CI_KEY }}
+          email: ${{ secrets.DCM_EMAIL }}
           analyze: true
           folders: lib
 
