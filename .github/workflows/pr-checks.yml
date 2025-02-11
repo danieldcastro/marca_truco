@@ -55,7 +55,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run DCM
-        run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
+        run: dcm analyze --ci-key=oss --email=oss lib
 
       - name: Check formatting
         run: dart format --set-exit-if-changed .
