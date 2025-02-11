@@ -49,8 +49,13 @@ jobs:
       - name: Check for suggested fixes
         run: dart fix --dry-run
 
-      - name: Run dart_code_metrics
-        run: dart run dart_code_metrics:metrics analyze lib
+      - name: Install DCM
+        uses: CQLabs/setup-dcm@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run DCM
+        run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
 
       - name: Check formatting
         run: dart format --set-exit-if-changed .
