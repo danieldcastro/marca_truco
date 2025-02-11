@@ -1,0 +1,37 @@
+name: Restrict Branch Names
+
+on:
+  create:
+
+jobs:
+  check-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check branch name
+      run: |
+        BRANCH_NAME="${{ github.ref_name }}"
+        if [[ ! "$BRANCH_NAME" =~ ^(feat/|fix/|chore/|ref/|docs/|revert/|build/|ci/|test/) ]]; then
+          echo "❌ Branch name '$BRANCH_NAME' is not allowed!"
+          echo "Allowed branch name prefixes are: feat/, fix/, chore/, ref/, docs/, revert/, build/, ci/, test/"
+    
+          # Excluir a branch inválida e capturar o código de resposta
+          echo "🗑️ Deleting invalid branch..."
+          RESPONSE=$(curl -s -o response.json -w "%{http_code}" -X DELETE \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${{ github.repository }}/git/refs/heads/$BRANCH_NAME")
+
+          # Exibir resposta da API para debug
+          echo "GitHub API response: $RESPONSE"
+          cat response.json
+    
+          # Se a exclusão for bem-sucedida (204), saia com sucesso
+          if [[ "$RESPONSE" == "204" ]]; then
+            echo "✅ Branch '$BRANCH_NAME' deleted successfully!"
+            exit 0
+          else
+            echo "⚠️ Failed to delete branch. Check response above."
+            exit 1
+          fi
+        fi
+
