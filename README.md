@@ -74,5 +74,5 @@ flutter run
 - [ ] Testes de integração com integration_test  
 - [ ] Configuração de Codemagic para CI/CD  
 - [ ] Configuração de Shorebird para atualizações OTA  
-- [ ] Análises automatizadas com dart code metrics e dart analysis  
+- [x] Análises automatizadas com dart code metrics e dart analysis  
 
