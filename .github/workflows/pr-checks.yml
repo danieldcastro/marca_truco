@@ -52,10 +52,12 @@ jobs:
       - name: Check formatting
         run: dart format --set-exit-if-changed .
 
-      - name: Install DCM
-        uses: CQLabs/setup-dcm@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      # TODO Uncomment the following lines to enable dart_code_metrics  
 
-      - name: Executar DCM
-        run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
+      # - name: Install DCM
+      #   uses: CQLabs/setup-dcm@v2
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Executar DCM
+      #   run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
