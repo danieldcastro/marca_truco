@@ -1,0 +1,2 @@
+C:/Desenvolvimento/Projetos Flutter/Portfolio/marca_truco/android/app/.cxx/Debug/3a11356r/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Desenvolvimento/Projetos Flutter/Portfolio/marca_truco/android/app/.cxx/Debug/3a11356r/armeabi-v7a/CMakeFiles/rebuild_cache.dir

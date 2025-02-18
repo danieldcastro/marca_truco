@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Seeis! - QA",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "toolArgs": [
+                "--flavor",
+                "qa",
+                "--dart-define",
+                "env=qa",
+            ]
+        },
+        {
+            "name": "Seeis! - PROD",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "toolArgs": [
+                "--flavor",
+                "prod",
+                "--dart-define",
+                "env=prod",
+            ]
+        },
+        {
+            "name": "Seeis! - QA (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "program": "lib/main.dart",
+            "toolArgs": [
+                "--flavor",
+                "qa",
+                "--dart-define",
+                "env=qa",
+            ]
+        },
+        {
+            "name": "Seeis! - PROD (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "program": "lib/main.dart",
+            "toolArgs": [
+                "--flavor",
+                "prod",
+                "--dart-define",
+                "env=prod",
+            ]
+        }
+    ]
+}
