@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Marca Truco QA",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "toolArgs": [
+                "--flavor",
+                "qa",
+                "--dart-define",
+                "flavor=qa",
+            ]
+        },
+        {
+            "name": "Marca Truco PROD",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "toolArgs": [
+                "--flavor",
+                "prod",
+                "--dart-define",
+                "flavor=prod",
+            ]
+        },
+        {
+            "name": "Marca Truco QA (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "program": "lib/main.dart",
+            "toolArgs": [
+                "--flavor",
+                "qa",
+                "--dart-define",
+                "flavor=qa",
+            ]
+        },
+        {
+            "name": "Marca Truco PROD (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "program": "lib/main.dart",
+            "toolArgs": [
+                "--flavor",
+                "prod",
+                "--dart-define",
+                "flavor=prod",
+            ]
+        }
+    ]
+}
