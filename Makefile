@@ -29,16 +29,6 @@ buildApk:
 buildIos:
 	$(MAKE) build ios
 
-# coverageTests:
-# 	dart pub global activate full_coverage
-# 	dart pub global run full_coverage
-# 	dart run scripts/dart/fix_full_coverage_file.dart
-# 	flutter test --coverage
-# 	genhtml coverage/lcov.info -o coverage/html
-
-# openCoverageAnalysis:
-# 	$(MAKE) coverageTests && open coverage/html/index.html
-
 bundleProd:
 	$(MAKE) buildBundle --release --flavor prod
 
