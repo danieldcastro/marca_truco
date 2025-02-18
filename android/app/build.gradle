@@ -10,6 +10,20 @@ android {
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
+    flavorDimensions "default"
+
+    productFlavors {
+        qa {
+            dimension "default"
+            applicationIdSuffix ".qa"
+            resValue "string", "app_name", "[QA] Seeis!"
+        }
+        prod {
+            dimension "default"
+            resValue "string", "app_name", "Seeis!"
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8

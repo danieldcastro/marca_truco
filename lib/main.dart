@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 
+import 'core/config/flavors/flavors.dart';
+
+const _flavorEnv = String.fromEnvironment('env');
+
 void main() {
-  runApp(const MainApp());
+  Flavors.init(_flavorEnv);
+  runApp(Main());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class Main extends StatelessWidget {
+  const Main({super.key});
 
   @override
-  Widget build(BuildContext context) => const MaterialApp(
+  Widget build(BuildContext context) => MaterialApp(
         home: Scaffold(
-          body: Center(
-            child: Text('Hello World!'),
+          appBar: AppBar(
+            title: Text(Flavors.appTitle),
           ),
         ),
       );

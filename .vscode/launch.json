@@ -10,7 +10,7 @@
                 "--flavor",
                 "qa",
                 "--dart-define",
-                "flavor=qa",
+                "env=qa",
             ]
         },
         {
@@ -22,7 +22,7 @@
                 "--flavor",
                 "prod",
                 "--dart-define",
-                "flavor=prod",
+                "env=prod",
             ]
         },
         {
@@ -35,7 +35,7 @@
                 "--flavor",
                 "qa",
                 "--dart-define",
-                "flavor=qa",
+                "env=qa",
             ]
         },
         {
@@ -48,7 +48,7 @@
                 "--flavor",
                 "prod",
                 "--dart-define",
-                "flavor=prod",
+                "env=prod",
             ]
         }
     ]
