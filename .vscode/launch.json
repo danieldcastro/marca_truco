@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Marca Truco QA",
+            "name": "Seeis! - QA",
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
@@ -14,7 +14,7 @@
             ]
         },
         {
-            "name": "Marca Truco PROD",
+            "name": "Seeis! - PROD",
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
@@ -26,7 +26,7 @@
             ]
         },
         {
-            "name": "Marca Truco QA (release mode)",
+            "name": "Seeis! - QA (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release",
@@ -39,7 +39,7 @@
             ]
         },
         {
-            "name": "Marca Truco PROD (release mode)",
+            "name": "Seeis! - PROD (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release",
