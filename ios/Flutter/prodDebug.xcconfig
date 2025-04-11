@@ -1,0 +1,6 @@
+#include "Generated.xcconfig"
+
+FLUTTER_TARGET=lib/main.dart
+ASSET_PREFIX=prod
+BUNDLE_NAME=Seeis!
+BUNDLE_DISPLAY_NAME=Seeis!
