@@ -61,3 +61,8 @@ linter:
     - unnecessary_await_in_return
     - prefer_expression_function_bodies
     - unnecessary_underscores
+    - use_decorated_box
+    - cascade_invocations
+    - prefer_const_declarations
+    - prefer_constructors_over_static_methods
+    - sized_box_shrink_expand
