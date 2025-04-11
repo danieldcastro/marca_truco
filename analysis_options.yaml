@@ -60,3 +60,4 @@ linter:
     - void_checks
     - unnecessary_await_in_return
     - prefer_expression_function_bodies
+    - unnecessary_underscores
